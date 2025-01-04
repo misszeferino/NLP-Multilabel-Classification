@@ -4,26 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tag Suggestion App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        input, button {
-            margin: 10px;
-        }
-    </style>
 </head>
 <body>
     <h1>Tag Suggestion App</h1>
     <p>Enter a text, and get suggested tags:</p>
-
     <textarea id="inputText" rows="4" cols="50"></textarea><br>
     <button onclick="getTags()">Get Tags</button>
-
-    <h3>Suggested Tags:</h3>
-    <p id="outputTags"></p>
+    <p id="suggestedTags">Suggested Tags:</p>
 
     <script>
         async function getTags() {
@@ -36,9 +23,15 @@
                 body: JSON.stringify({ text: text }),
             });
 
-            const data = await response.json();
-            document.getElementById('outputTags').innerText = data.predicted_tags.join(', ');
+            if (response.ok) {
+                const result = await response.json();
+                const tags = result.predicted_tags.join(', ');
+                document.getElementById('suggestedTags').textContent = 'Suggested Tags: ' + tags;
+            } else {
+                document.getElementById('suggestedTags').textContent = 'Error: Unable to get tags';
+            }
         }
     </script>
 </body>
 </html>
+
