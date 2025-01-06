@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tag Suggestion App</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -15,59 +15,94 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            background: linear-gradient(135deg, #f0f4f8, #ffffff);
             text-align: center;
+            color: #333;
         }
 
+        /* Header Styles */
         h1 {
-            color: color-mix(in srgb, #515769, transparent 20%);
             font-size: 36px;
+            color: color-mix(in srgb, #515769, transparent 20%);
             margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
+        /* Paragraph Text Styles */
         p {
             color: #a6a7aa;
             font-size: 16px;
+            margin-bottom: 30px;
         }
 
+        /* Textarea Styles */
         textarea {
-            width: 70%;
-            padding: 10px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
+            width: 80%;
+            max-width: 600px;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
             font-size: 16px;
-            margin-bottom: 20px;
             resize: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: border-color 0.3s ease;
         }
 
+        textarea:focus {
+            border-color: #17bfd2e5;
+            outline: none;
+        }
+
+        /* Button Styles */
         button {
             background-color: #17bfd2e5;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 16px;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 18px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         button:hover {
             background-color: #17bfd2;
+            transform: translateY(-2px);
         }
 
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Suggested Tags Styles */
         #suggestedTags {
-            margin-top: 20px;
             font-size: 18px;
+            font-weight: 600;
             color: #515769;
-            font-weight: bold;
+            margin-top: 20px;
+            word-wrap: break-word;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
+        /* Container Styles */
         .container {
             width: 80%;
-            max-width: 800px;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
         }
 
     </style>
@@ -76,8 +111,8 @@
 
 <div class="container">
     <h1>Tag Suggestion App</h1>
-    <p>Enter a text, and get suggested tags:</p>
-    <textarea id="inputText" rows="4" cols="50" placeholder="Type your text here..."></textarea><br>
+    <p>Enter text and get suggested tags based on the content:</p>
+    <textarea id="inputText" rows="6" placeholder="Type your text here..."></textarea><br>
     <button onclick="getTags()">Get Tags</button>
     <p id="suggestedTags">Suggested Tags:</p>
 </div>
@@ -105,4 +140,3 @@
 
 </body>
 </html>
-
