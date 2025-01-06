@@ -25,7 +25,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 120px; /* Adjust size */
+            width: 60px; /* Adjust size */
         }
 
         /* Header Styles */
@@ -143,15 +143,14 @@
 
 <div class="container">
     <img src="logo.png" alt="Logo" class="logo">
-    <h1>Tag Suggestion App</h1>
-    <p>Enter text and get suggested tags based on the content:</p>
+    <h1>Tag Suggestion App</h1>    
 
     <!-- Information Section -->
     <div class="info-section">
         <p><strong>How It Works:</strong></p>
         <p>This app was trained using Stack Overflow data and utilizes Natural Language Processing (NLP) and Multi-label Classification to generate relevant tags based on the text input. By analyzing the content of your text, it suggests the most appropriate tags to categorize the topic.</p>
     </div>
-
+    <p>Enter text and get suggested tags based on the content:</p>
     <!-- Text Input & Button -->
     <textarea id="inputText" rows="6" placeholder="Type your text here..."></textarea><br>
     <button onclick="getTags()">Get Tags</button>
