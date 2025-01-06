@@ -20,6 +20,14 @@
             color: #333;
         }
 
+        /* Logo Styles */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px; /* Adjust size */
+        }
+
         /* Header Styles */
         h1 {
             font-size: 36px;
@@ -34,6 +42,21 @@
             color: #a6a7aa;
             font-size: 16px;
             margin-bottom: 30px;
+        }
+
+        /* Additional Info Styles */
+        .info-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .info-section p {
+            color: #515769;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         /* Textarea Styles */
@@ -90,6 +113,13 @@
             margin-right: auto;
         }
 
+        /* Footer Styles */
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #a6a7aa;
+        }
+
         /* Container Styles */
         .container {
             width: 80%;
@@ -109,12 +139,27 @@
 </head>
 <body>
 
+<img src="your-logo.png" alt="Logo" class="logo">
+
 <div class="container">
     <h1>Tag Suggestion App</h1>
     <p>Enter text and get suggested tags based on the content:</p>
+
+    <!-- Information Section -->
+    <div class="info-section">
+        <p><strong>How It Works:</strong></p>
+        <p>This app was trained using Stack Overflow data and utilizes Natural Language Processing (NLP) and Multi-label Classification to generate relevant tags based on the text input. By analyzing the content of your text, it suggests the most appropriate tags to categorize the topic.</p>
+    </div>
+
+    <!-- Text Input & Button -->
     <textarea id="inputText" rows="6" placeholder="Type your text here..."></textarea><br>
     <button onclick="getTags()">Get Tags</button>
     <p id="suggestedTags">Suggested Tags:</p>
+</div>
+
+<!-- Footer with Copyright -->
+<div class="footer">
+    <p>&copy; 2025 Luciana Zeferino</p>
 </div>
 
 <script>
