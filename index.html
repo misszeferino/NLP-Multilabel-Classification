@@ -15,7 +15,7 @@
     <script>
         async function getTags() {
             const text = document.getElementById('inputText').value;
-            const response = await fetch('https://08oz3a84lk.execute-api.us-east-1.amazonaws.com/predict-tags', {
+            const response = await fetch('https://08oz3a84lk.execute-api.us-east-1.amazonaws.com/webhook', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
