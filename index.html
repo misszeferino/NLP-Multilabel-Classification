@@ -14,27 +14,23 @@
 
     <script>
         async function getTags() {
-            try {
-                const text = document.getElementById("inputText").value;
-                const response = await fetch('https://08oz3a84lk.execute-api.us-east-1.amazonaws.com', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ text })
-                });
-        
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-        
-                const data = await response.json();
-                console.log(data);
-                // Handle response data (e.g., display tags on the page)
-            } catch (error) {
-                console.error("Error in getTags:", error);
-                alert("An error occurred. Please try again.");
+            const text = document.getElementById('inputText').value;
+            const response = await fetch('https://08oz3a84lk.execute-api.us-east-1.amazonaws.com/predict-tags', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: text }),
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                const tags = result.predicted_tags.join(', ');
+                document.getElementById('suggestedTags').textContent = 'Suggested Tags: ' + tags;
+            } else {
+                document.getElementById('suggestedTags').textContent = 'Error: Unable to get tags';
             }
-}
+        }
     </script>
 </body>
 </html>
-
