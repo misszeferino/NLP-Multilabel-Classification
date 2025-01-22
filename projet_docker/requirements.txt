@@ -1,0 +1,11 @@
+flask==3.1.0
+bs4
+nltk==3.9.1
+scikit-learn==1.5.2
+pandas
+numpy==1.26.4
+flask_cors
+
+
+
+
