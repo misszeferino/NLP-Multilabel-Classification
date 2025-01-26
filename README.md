@@ -28,6 +28,7 @@ Ce projet vise à développer un système automatique de suggestion de tags pour
   - Développement d’une API pour suggérer automatiquement des tags en texte libre.
   - Déploiement cloud via AWS (API Gateway, Lambda, EC2).
   - Intégration et validation de bout en bout avec Postman.
+  - <a href="https://misszeferino.github.io/NLP-Multilabel-Classification/" target="_blank">>>> Click here to test the API</a>
 
 ## Technologies utilisées
 
