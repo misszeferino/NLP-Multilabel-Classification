@@ -1,4 +1,4 @@
-Development and Deployment of a Prediction API
+# Development and Deployment of a Prediction API
 
 This section outlines the process of developing and deploying a prediction API for tag suggestion based on user-submitted text. The API leverages the machine learning models trained in the project and is hosted on AWS, with an integrated user interface hosted on GitHub Pages.
 
