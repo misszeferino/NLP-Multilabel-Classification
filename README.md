@@ -48,7 +48,7 @@ Ce projet vise à développer un système automatique de suggestion de tags pour
 ## Ressources
 
 - [Documentation du projet](https://misszeferino.github.io/NLP-Multilabel-Classification/)
-- [API déployée sur AWS](#)
+- [API déployée sur AWS]((https://misszeferino.github.io/NLP-Multilabel-Classification/))
 
 ## Auteurs
 
