@@ -2,7 +2,7 @@
 
 This section outlines the process of developing and deploying a prediction API for tag suggestion based on user-submitted text. The API leverages the machine learning models trained in the project and is hosted on AWS, with an integrated user interface hosted on GitHub Pages.
 
-![Dashboard Overview](./Images/4-gif.gif)
+![Dashboard Overview](./Images/api-test.gif)
 
 ## 8.1 Architecture Overview
 
